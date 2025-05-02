@@ -41,19 +41,4 @@ public class FileHandler {
         }
     }
 
-    /*
-     * Lee un archivo que se encuentra en ACSSI y los convierte
-     * a bits devolviendo la cadena de bits
-     */
-    public String readBitsFromASCII(String path) throws IOException {
-        StringBuilder bits = new StringBuilder();
-        try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
-            String line;
-            while ((line = reader.readLine()) != null) {
-                bits.append(line);
-            }
-        }
-        return bits.toString();
-    }
-
 }
