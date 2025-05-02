@@ -6,7 +6,7 @@
  * @date 1/05/2024
  * 
  * @description
- * Programa que lee el archivo y realiza las conversiones de bits a ASCCI y de ASCII a bits
+ * Programa que lee el archivo
  */
 
 import java.io.BufferedReader;
@@ -32,11 +32,12 @@ public class FileHandler {
     }
 
     /*
-     * Escribe la cadena de bits a ASCII en un archivo de texto
+     * Escribe la cadena de texto ya listo en un
+     * archivo
      */
-    public void writeBitsAsASCII(String path, String bits) throws IOException {
+    public void writeFile(String path, String content) throws IOException {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(path))) {
-            writer.write(bits);
+            writer.write(content);
         }
     }
 
@@ -53,16 +54,6 @@ public class FileHandler {
             }
         }
         return bits.toString();
-    }
-
-    /*
-     * Escribe la cadena de texto ya listo en un
-     * archivo
-     */
-    public void writeFile(String path, String content) throws IOException {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(path))) {
-            writer.write(content);
-        }
     }
 
 }
