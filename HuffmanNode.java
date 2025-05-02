@@ -33,7 +33,7 @@ public class HuffmanNode implements Comparable<HuffmanNode> {
         this.data = data;
     }
 
-    public int getFrecuency() {
+    public int getFrequency() {
         return frequency;
     }
 
