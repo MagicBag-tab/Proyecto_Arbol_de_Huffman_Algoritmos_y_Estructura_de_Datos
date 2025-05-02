@@ -129,7 +129,7 @@ public class HuffmanTree {
     /*
      * Reconstruye el árbol de huffman a partir de los códigos
      */
-    public void bildTreeFromCodes(Map<Character, String> codeTable) {
+    public void buildTreeFromCodes(Map<Character, String> codeTable) {
         root = new HuffmanNode('\0', 0);
         codes = new HashMap<>(codeTable);
         reverseCodes = new HashMap<>();
